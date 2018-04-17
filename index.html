@@ -1,0 +1,372 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>КАРТА вызова неотложной медицинской помощи</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+	
+<div class="container-fluid">
+  <form>
+		
+		<h2>Адрес вызова</h2>
+		
+		<div class="jumbotron">
+			<div class="form-group">
+				<label for="call_address_region">Район:</label>
+				<input type="text" class="form-control" id="call_address_region" aria-describedby="Район адреса вызова" placeholder="Введите район адреса вызова">			
+			</div>
+			
+			<div class="form-group">
+				<label for="call_address_locality">Населенный пункт:</label>
+				<input type="text" class="form-control" id="call_address_locality" aria-describedby="Населенный пункт адреса вызова" placeholder="Введите васеленный пункт адреса вызова">			
+			</div>
+			
+			<div class="form-group">
+				<label for="call_address_distance">Расстояние:</label>
+				<input type="number" class="form-control" id="call_address_distance" aria-describedby="Расстояние адреса вызова" placeholder="Введите расстояние адреса вызова">			
+			</div>
+			
+			<div class="form-group row">
+				<label for="call_address_house" class="col-sm-1 col-form-label">Дом:</label>
+				<div class="col-sm-3">
+					<input type="number" class="form-control" id="call_address_house" aria-describedby="Дом адреса вызова" placeholder="Дома адреса вызова">			
+				</div>
+				
+				<label for="call_address_corpus" class="col-sm-1 col-form-label">Корпус:</label>
+				<div class="col-sm-3">
+					<input type="text" class="form-control" id="call_address_corpus" aria-describedby="Корпус адреса вызова" placeholder="Введите номер корпуса адреса вызова">	
+				</div>
+				
+				<label for="call_address_entrance"class="col-sm-1 col-form-label">Подъезд:</label>
+				<div class="col-sm-3">
+					<input type="number" class="form-control" id="call_address_entrance" aria-describedby="Подъезд адреса вызова" placeholder="Введите номер подъезд адреса вызова">
+				</div>
+			</div>
+			
+			<div class="form-group row">			
+				
+				<label for="call_address_floor" class="col-sm-1 col-form-label">Этаж:</label>
+				<div class="col-sm-3">
+					<input type="number" class="form-control" id="call_address_floor" aria-describedby="Этаж адреса вызова" placeholder="Этаж адреса вызова">				
+				</div>
+				
+				<label for="call_address_doorcode" class="col-sm-1 col-form-label">Код:</label>
+				<div class="col-sm-3">
+					<input type="text" class="form-control" id="call_address_doorcode" aria-describedby="Код подъезда адреса вызова" placeholder="Код подъезда адреса вызова">
+				</div>
+				
+				<label for="call_address_room" class="col-sm-1 col-form-label">Квартира:</label>
+				<div class="col-sm-3">
+					<input type="text" class="form-control" id="call_address_room" aria-describedby="Квартира адреса вызова" placeholder="Введите номер квартиры адреса вызова">	
+				</div>
+			</div>
+						
+			<div class="form-group">
+				<label for="call_address_who_summoned">Кто вызвал:</label>
+				<input type="text" class="form-control" id="call_address_who_summoned" aria-describedby="Кто звонил" placeholder="Укажите фамилию вызывающего">			
+			</div>
+			
+			<div class="form-group form-check">
+				<label class="form-check-label">
+				  <input type="checkbox" name="call_address_ not_introduce" class="form-check-input">
+				  Не представился
+				</label>
+			 </div>
+			 			 
+			<div class="form-group">
+				<label for="call_address_ caller_phone">Телефон вызывающего:</label>
+				<input type="telephone" class="form-control" id="call_address_ caller_phone" aria-describedby="Телефон вызывающего" placeholder="Укажите телефон вызывающего">			
+			</div>
+		 
+		 </div>
+		 
+		<h2>Пациент</h2>
+		
+		<div class="jumbotron">
+				<div class="form-group row">
+						<label for="patient_lastname" class="col-sm-1 col-form-label">Фамилия:</label>
+						<div class="col-sm-3">
+							<input type="text" class="form-control" id="patient_lastname" aria-describedby="Фамилия" placeholder="Фамилия">			
+						</div>
+						
+						<label for="patient_firstname" class="col-sm-1 col-form-label">Имя:</label>
+						<div class="col-sm-3">
+							<input type="text" class="form-control" id="patient_firstname" aria-describedby="Имя" placeholder="Имя">	
+						</div>
+						
+						<label for="patient_secondname"class="col-sm-1 col-form-label">Отчество:</label>
+						<div class="col-sm-3">
+							<input type="text" class="form-control" id="patient_secondname" aria-describedby="Отчество" placeholder="Отчество">
+						</div>
+				</div>
+
+				<div class="form-group row">
+						<label for="patient_birthday" class="col-sm-1 col-form-label">Дата рождения:</label>
+						<div class="col-sm-3">
+							<input type="date" class="form-control" id="patient_birthday" aria-describedby="Дата рождения" placeholder="Дата рождения">			
+						</div>
+						
+						<label for="patient_age" class="col-sm-1 col-form-label">Возраст:</label>
+						<div class="col-sm-3">
+							<input type="number" class="form-control" id="patient_age" aria-describedby="Возраст" placeholder="Возраст">	
+						</div>
+						
+						<div class="col-sm-1 col-form-label"></div>
+						<div class="col-sm-3">							
+						</div>
+				</div>
+
+				<div class="form-group row">
+					<div id="patient_sex" class="col-sm-11">
+
+						<div class="form-group form-check form-check-inline">								
+								<label class="form-check-label" for="patient_sex_male">Пол:</label>
+						</div>
+
+						<div class="form-group form-check form-check-inline">
+							<input class="form-check-input" type="radio" id="patient_sex_male" name="patient_sex">
+							<label class="form-check-label" for="patient_sex_male">Мужской</label>
+						</div>
+
+						
+						<div class="form-group form-check form-check-inline">
+								<input class="form-check-input" type="radio" id="patient_sex_female" name="patient_sex">
+								<label class="form-check-label" for="patient_sex_female">Женский</label>
+						</div>
+					</div>
+				</div>
+
+				
+				<div class="form-group row">
+						<label for="patient_passport_serial" class="col-sm-1 col-form-label">Паспорт серия:</label>
+						<div class="col-sm-3">
+							<input type="text" class="form-control" id="patient_passport_serial" aria-describedby="Серия" placeholder="Серия">			
+						</div>
+						
+						<label for="patient_passport_number" class="col-sm-1 col-form-label">номер</label>
+						<div class="col-sm-3">
+							<input type="text" class="form-control" id="patient_passport_number" aria-describedby="Номер" placeholder="Номер">	
+						</div>
+						
+						<div class="col-sm-1 col-form-label"></div>
+						<div class="col-sm-3">							
+						</div>
+				</div>
+
+				<div class="form-group row">
+						<label for="patient_call_count" class="col-sm-1 col-form-label">Количество обращений:</label>
+						<div id="patient_call_count" class="col-sm-11">
+	
+								<div class="form-group form-check form-check-inline">
+									<input class="form-check-input" type="radio" id="patient_call_count_eq_0" name="patient_call_count">
+									<label class="form-check-label" for="patient_call_count_eq_0">0</label>
+								</div>
+		
+	
+								<div class="form-group form-check form-check-inline">
+										<input class="form-check-input" type="radio" id="patient_call_count_eq_1" name="patient_call_count">
+										<label class="form-check-label" for="patient_call_count_eq_1">1</label>
+								</div>
+	
+								<div class="form-group form-check form-check-inline">
+										<input class="form-check-input" type="radio" id="patient_call_count_eq_2" name="patient_call_count">
+										<label class="form-check-label" for="patient_call_count_eq_2">2</label>
+								</div>
+									
+								<div class="form-group form-check form-check-inline">
+										<input class="form-check-input" type="radio" id="patient_call_count_eq_3_5" name="patient_call_count">
+										<label class="form-check-label" for="patient_call_count_eq_3_5">3-5</label>
+								</div>
+								
+								<div class="form-group form-check form-check-inline">
+									<input class="form-check-input" type="radio" id="patient_call_count_eq_6_10" name="patient_call_count">
+									<label class="form-check-label" for="patient_call_count_eq_6_10">6-10</label>
+								</div>
+									
+								<div class="form-group form-check form-check-inline">
+										<input class="form-check-input" type="radio" id="patient_call_count_more_10" name="patient_call_count">
+										<label class="form-check-label" for="patient_call_count_more_10">10</label>
+								</div>
+						</div>
+				</div>
+
+				<div class="form-group row">
+						<label for="patient_last_date_call" class="col-sm-1 col-form-label">Дата последнего обращения:</label>
+						<div class="col-sm-11">
+							<input type="date" class="form-control" id="patient_last_date_call" aria-describedby="Дата последнего обращения" placeholder="Дата последнего обращения">			
+						</div>
+				</div>
+		</div>
+
+		<h2>Бригада</h2>
+		
+		<div class="jumbotron">
+				<div class="form-group row">
+						<label for="brigade_head" class="col-sm-2 col-form-label">Руководитель бригады:</label>
+						<div class="col-sm-4">
+							<select id="brigade_head" class="form-control">
+								<option selected>Иванов И.И.</option>
+								<option>Петров П.П.</option>
+								<option>Сидоров С.С.</option>
+							</select>							
+						</div>
+						
+						<label for="brigade_head_position" class="col-sm-2 col-form-label">Должность руководителя бригады:</label>
+						<div class="col-sm-4">
+							<select class="form-control" id="brigade_head_position">
+									<option selected>Руководитель подразделения</option>
+									<option>Начальник отдела</option>
+									<option>Старший специалист</option>
+							</select>
+						</div>
+				</div>
+				
+				<div class="form-group row">
+						<label for="brigade_assistant" class="col-sm-2 col-form-label">Помощник бригады:</label>
+						<div class="col-sm-4">
+							<select class="form-control" id="brigade_assistant">
+									<option>Иванов И.И.</option>
+									<option selected>Петров П.П.</option>
+									<option>Сидоров С.С.</option>
+							</select>
+						</div>
+						
+						<label for="brigade_assistant_position" class="col-sm-2 col-form-label">Должность помощника бригады:</label>
+						<div class="col-sm-4">
+							<select class="form-control" id="brigade_assistant_position">
+									<option>Руководитель подразделения</option>
+									<option>Начальник отдела</option>
+									<option selected>Старший специалист</option>
+							</select>
+						</div>
+				</div>
+
+				<div class="form-group row">
+						<label for="dispatcher" class="col-sm-2 col-form-label">Диспетчер:</label>
+						<div class="col-sm-4">
+							<select class="form-control" id="dispatcher">
+									<option>Иванов И.И.</option>
+									<option>Петров П.П.</option>
+									<option selected>Сидоров С.С.</option>
+							</select>
+						</div>						
+				</div>
+		</div>
+
+		<h2>Жалобы</h2>
+		
+		<div class="jumbotron">
+				<div class="form-group row">
+						<label for="complaints_nausea_vomit" class="col-form-label">Тошнота, рвота:</label>
+						<textarea class="form-control" id="complaints_nausea_vomit" name="complaints_nausea_vomit"></textarea>
+				</div>
+
+				<div class="form-group row">					
+						<label for="complaints_abdomen_chest_pain" class="col-form-label">Боль в животе, в груди:</label>
+						<textarea class="form-control" id="complaints_abdomen_chest_pain" name="complaints_abdomen_chest_pain"></textarea>
+				</div>
+
+				<div class="form-group row">
+					<div class="col-sm-6">						
+							<label for="complaints_diuresis" class="col-form-label">Диурез:</label>
+							<textarea class="form-control" id="complaints_diuresis" name="complaints_other"></textarea>						
+					</div>
+
+					<div class="col-sm-6">						
+							<label for="complaints_excrement" class="col-form-label">Стул:</label>
+							<textarea class="form-control" id="complaints_excrement" name="complaints_other"></textarea>						
+					</div>
+
+				</div>
+		</div>
+		
+		<h2>Анамнез</h2>
+		
+		<div class="jumbotron">
+				<div class="form-group row">
+						<label for="anamnesis_what_happened" class="col-form-label">Что случилось:</label>
+						<textarea class="form-control" id="anamnesis_what_happened" name="anamnesis_what_happened"></textarea>
+				</div>
+
+				<div class="form-group row">
+						<div id="anamnesis_du_rnd" class="col-sm-11">
+	
+							<div class="form-group form-check form-check-inline">								
+									<label class="form-check-label" for="anamnesis_du_rnd">ДУ РНД:</label>
+							</div>
+	
+							<div class="form-group form-check form-check-inline">
+								<input class="form-check-input" type="radio" id="anamnesis_du_rnd_yes" name="anamnesis_du_rnd">
+								<label class="form-check-label" for="anamnesis_du_rnd_yes">да</label>
+							</div>
+	
+							
+							<div class="form-group form-check form-check-inline">
+									<input class="form-check-input" type="radio" id="anamnesis_du_rnd_no" name="anamnesis_du_rnd">
+									<label class="form-check-label" for="anamnesis_du_rnd_no">нет</label>
+							</div>
+						</div>
+					</div>
+
+		</div>
+
+		
+		<div class="jumbotron">
+				<div class="form-group row">
+						<label for="foot_dispatcher_comments" class="col-form-label">Замечания к диспетчеру:</label>
+						<textarea class="form-control" id="foot_dispatcher_comments" name="foot_dispatcher_comments"></textarea>
+				</div>
+
+				<div class="form-group row">
+						<label for="foot_who_issued_fio" class="col-sm-2 col-form-label">Карту оформил ФИО:</label>
+						<div class="col-sm-4">
+							<select id="foot_who_issued_fio" class="form-control">
+								<option selected>Иванов И.И.</option>
+								<option>Петров П.П.</option>
+								<option>Сидоров С.С.</option>
+							</select>							
+						</div>
+						
+						<label for="foot_who_issued_position" class="col-sm-2 col-form-label">Должность:</label>
+						<div class="col-sm-4">
+							<select class="form-control" id="foot_who_issued_position">
+									<option selected>Руководитель подразделения</option>
+									<option>Начальник отдела</option>
+									<option>Старший специалист</option>
+							</select>
+						</div>
+				</div>
+				
+				<div class="form-group row">
+						<label for="foot_who_checked_fio" class="col-sm-2 col-form-label">Карту проверил:</label>
+						<div class="col-sm-4">
+							<select class="form-control" id="foot_who_checked_fio">
+									<option>Иванов И.И.</option>
+									<option selected>Петров П.П.</option>
+									<option>Сидоров С.С.</option>
+							</select>
+						</div>
+						
+						<label for="foot_who_checke_position" class="col-sm-2 col-form-label">Должность:</label>
+						<div class="col-sm-4">
+							<select class="form-control" id="foot_who_checke_position">
+									<option>Руководитель подразделения</option>
+									<option>Начальник отдела</option>
+									<option selected>Старший специалист</option>
+							</select>
+						</div>
+				</div>
+
+		</div>
+
+  </form>
+</div>
+
+</body>
+</html> 
